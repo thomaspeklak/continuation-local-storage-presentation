@@ -215,6 +215,13 @@ body {
   border-color: #42affa;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
+.inline-image {
+  vertical-align: text-bottom !important;
+  border: none !important;
+  background: transparent !important;
+  margin-right: 15px !important;
+  display: inline-block !important; }
+
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
