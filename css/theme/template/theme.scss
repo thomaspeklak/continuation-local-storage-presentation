@@ -96,6 +96,10 @@ body {
 	margin: 0 0 0 1em;
 }
 
+.no-bullets {
+    list-style-type: none !important;
+}
+
 .reveal ol {
 	list-style-type: decimal;
 }
