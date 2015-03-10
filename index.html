@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>reveal.js - The HTML Presentation Framework</title>
+    <title>Continuation Local Storage</title>
 
     <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
     <meta name="author" content="Hakim El Hattab">
@@ -189,14 +189,14 @@ module.exports = function patchBluebird(ns) {
   var Promise = require('bluebird');
   var proto = Promise && Promise.prototype;
   shimmer.wrap(proto, '_addCallbacks', function(_addCallbacks) {
-    return function ns_addCallbacks(fulfill, reject, progress, 
+    return function ns_addCallbacks(fulfill, reject, progress,
                                     promise, receiver) {
 
       if (typeof fulfill === 'function') fulfill = ns.bind(fulfill);
       if (typeof reject === 'function') reject = ns.bind(reject);
       if (typeof progress === 'function') progress = ns.bind(progress);
-      
-      return _addCallbacks.call(this, fulfill, reject, progress, 
+
+      return _addCallbacks.call(this, fulfill, reject, progress,
                                  promise, receiver);
     };
   });
